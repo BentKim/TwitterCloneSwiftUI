@@ -17,6 +17,7 @@
 		3A5EF2E82883CD1B00CFEBA6 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5EF2E72883CD1B00CFEBA6 /* ExploreView.swift */; };
 		3A5EF2EA2883CD3900CFEBA6 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5EF2E92883CD3900CFEBA6 /* NotificationView.swift */; };
 		3A5EF2EC2883CD4400CFEBA6 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5EF2EB2883CD4400CFEBA6 /* MessageView.swift */; };
+		3A5EF2F02883E69900CFEBA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5EF2EF2883E69900CFEBA6 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		3A5EF2E72883CD1B00CFEBA6 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		3A5EF2E92883CD3900CFEBA6 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		3A5EF2EB2883CD4400CFEBA6 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		3A5EF2EF2883E69900CFEBA6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +196,25 @@
 		3A5EF2E62883CCE100CFEBA6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				3A5EF2EE2883E68900CFEBA6 /* Views */,
+				3A5EF2ED2883E68100CFEBA6 /* ViewModels */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		3A5EF2ED2883E68100CFEBA6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3A5EF2EE2883E68900CFEBA6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A5EF2EF2883E69900CFEBA6 /* ProfileView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5EF2C22881CC9D00CFEBA6 /* ContentView.swift in Sources */,
+				3A5EF2F02883E69900CFEBA6 /* ProfileView.swift in Sources */,
 				3A5EF2DE2883C33200CFEBA6 /* TweetRowView.swift in Sources */,
 				3A5EF2EA2883CD3900CFEBA6 /* NotificationView.swift in Sources */,
 				3A5EF2D92881CF4600CFEBA6 /* FeedView.swift in Sources */,
