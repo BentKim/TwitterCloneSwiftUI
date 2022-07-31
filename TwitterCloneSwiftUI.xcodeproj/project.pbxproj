@@ -18,6 +18,7 @@
 		3A4262E128902EBD00962D0C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4262E028902EBD00962D0C /* FirebaseFirestoreSwift */; };
 		3A4262E328902EBD00962D0C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4262E228902EBD00962D0C /* FirebaseStorage */; };
 		3A42634A2891843600962D0C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4263492891843600962D0C /* AuthViewModel.swift */; };
+		3A56627028972E3F00AD1547 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A56626F28972E3F00AD1547 /* ProfilePhotoSelectorView.swift */; };
 		3A5EF2C02881CC9D00CFEBA6 /* TwitterCloneSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5EF2BF2881CC9D00CFEBA6 /* TwitterCloneSwiftUIApp.swift */; };
 		3A5EF2C22881CC9D00CFEBA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5EF2C12881CC9D00CFEBA6 /* ContentView.swift */; };
 		3A5EF2C42881CCA200CFEBA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A5EF2C32881CCA200CFEBA6 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		3A4262D7288FDA6400962D0C /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		3A4262D928902D6600962D0C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A4263492891843600962D0C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		3A56626F28972E3F00AD1547 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		3A5EF2BC2881CC9D00CFEBA6 /* TwitterCloneSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterCloneSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A5EF2BF2881CC9D00CFEBA6 /* TwitterCloneSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCloneSwiftUIApp.swift; sourceTree = "<group>"; };
 		3A5EF2C12881CC9D00CFEBA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			children = (
 				3A17219D288D2DA5004CFCA9 /* LoginView.swift */,
 				3A17219F288D2DB0004CFCA9 /* RegistrationView.swift */,
+				3A56626F28972E3F00AD1547 /* ProfilePhotoSelectorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				3A5EF33D288C2D7800CFEBA6 /* UserStatusView.swift in Sources */,
 				3A5EF3322889944200CFEBA6 /* UserRowView.swift in Sources */,
 				3A5EF2E82883CD1B00CFEBA6 /* ExploreView.swift in Sources */,
+				3A56627028972E3F00AD1547 /* ProfilePhotoSelectorView.swift in Sources */,
 				3A5EF2E12883CA7A00CFEBA6 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
