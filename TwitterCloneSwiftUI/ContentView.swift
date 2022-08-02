@@ -57,13 +57,25 @@ extension ContentView{
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    withAnimation(.easeInOut) {
-                        showMenu.toggle()
+                if let user = viewModel.currentUser{
+                    Button {
+                        withAnimation(.easeInOut) {
+                            showMenu.toggle()
+                        }
+                    } label: {
+                        AsyncImage(
+                            url: URL(string: user.profileImageUrl),
+                            content: { image in
+                                image.resizable()
+                                    .scaledToFill()
+                                    .clipShape(Circle())
+                                    .frame(width: 32, height: 32)
+                            },
+                            placeholder: {
+                                ProgressView()
+                            }
+                        )
                     }
-                } label: {
-                    Circle()
-                        .frame(width: 32, height: 32)
                 }
             }
         }

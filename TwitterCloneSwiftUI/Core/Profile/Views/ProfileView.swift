@@ -11,6 +11,11 @@ struct ProfileView: View {
     @State private var selectedFilter: TweetFilterViewModel = .tweets
     @Environment(\.dismiss) private var dismiss
     @Namespace var animation
+    private let user: User
+    
+    init(user: User) {
+        self.user = user
+    }
     
     var body: some View {
         VStack(alignment: .leading){
@@ -31,7 +36,7 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(user: User(id: UUID().uuidString, username: "username", fullname: "fullname", profileImageUrl: "", email: "email"))
     }
 }
 
@@ -49,12 +54,22 @@ extension ProfileView {
                         .resizable()
                         .frame(width: 20, height: 16)
                         .foregroundColor(.white)
-                        .offset(x: 16, y: 12)
+                        .offset(x: 16, y: -20)
                 }
                 
-                Circle()
-                    .frame(width: 72, height: 72)
-                    .offset(x: 16, y: 24)
+                AsyncImage(
+                    url: URL(string: user.profileImageUrl),
+                    content: { image in
+                        image.resizable()
+                            .scaledToFill()
+                            .clipShape(Circle())
+                            .frame(width: 72, height: 72)
+                            .offset(x: 16, y: 24)
+                    },
+                    placeholder: {
+                        ProgressView()
+                    }
+                )
             }
         }
         .frame(height: 96)
@@ -86,14 +101,14 @@ extension ProfileView {
     var userInfoDetails:some View{
         VStack(alignment: .leading, spacing: 4) {
             HStack {
-                Text("Heath Ledger")
+                Text(user.fullname)
                     .font(.title2).bold()
                 
                 Image(systemName: "checkmark.seal.fill")
                     .foregroundColor(Color(.systemBlue))
             }
             
-            Text("@Terryid")
+            Text("@\(user.username)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             
