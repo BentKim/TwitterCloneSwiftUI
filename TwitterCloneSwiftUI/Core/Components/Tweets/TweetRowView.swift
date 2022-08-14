@@ -8,33 +8,48 @@
 import SwiftUI
 
 struct TweetRowView: View {
+    let tweet: Tweet
     var body: some View {
         VStack(alignment: .leading){
-            HStack(alignment: .top, spacing: 12) {
-                Circle()
-                    .frame(width: 56, height: 56)
-                    .foregroundColor(Color.blue)
-                
-                // user info & tweet caption
-                VStack(alignment: .leading, spacing: 4){
-                    // user info
-                    HStack{
-                        Text("Terry")
-                            .font(.subheadline).bold()
-                        
-                        Text("@Terryid")
-                            .foregroundColor(.gray)
-                            .font(.caption)
-                        
-                        Text("2w")
-                            .foregroundColor(.gray)
-                            .font(.caption)
-                    }
+            
+            //profile image + user info +tweet
+            if let user = tweet.user{
+                HStack(alignment: .top, spacing: 12) {
+                    AsyncImage(
+                        url: URL(string: user.profileImageUrl),
+                        content: { image in
+                            image.resizable()
+                                .scaledToFill()
+                                .clipShape(Circle())
+                                .frame(width: 56, height: 56)
+                        },
+                        placeholder: {
+                            ProgressView()
+                        }
+                    )
                     
-                    //tweet caption
-                    Text("ContentContentContentContentContentContentContentContentContentContentContentContentContentContent")
-                        .font(.subheadline)
-                        .multilineTextAlignment(.leading)
+                    // user info & tweet caption
+                    VStack(alignment: .leading, spacing: 4){
+                        // user info
+                        HStack{
+                            Text(user.fullname)
+                                .font(.subheadline).bold()
+                            
+                            Text("@\(user.username)")
+                                .foregroundColor(.gray)
+                                .font(.caption)
+                            
+                            Text("2w")
+                                .foregroundColor(.gray)
+                                .font(.caption)
+                        }
+                        
+                        
+                        //tweet caption
+                        Text(tweet.caption)
+                            .font(.subheadline)
+                            .multilineTextAlignment(.leading)
+                    }
                 }
             }
             //action Buttons
@@ -72,7 +87,7 @@ struct TweetRowView: View {
                     Image(systemName: "bookmark")
                         .font(.subheadline)
                 }
-
+                
             }
             .padding()
             .foregroundColor(.gray)
@@ -82,8 +97,8 @@ struct TweetRowView: View {
     }
 }
 
-struct TweetRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        TweetRowView()
-    }
-}
+//struct TweetRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TweetRowView()
+//    }
+//}
